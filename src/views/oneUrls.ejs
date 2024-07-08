@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+<body>
+  <header>
+    <div id="urls-header">
+      <a href="/urls">
+        <div id="title">TinyLinker</div>
+      </a>
+      <a href="/urls"><button>My URL</button> </a>
+      <a href="/urls/new"><button>Create New URL</button> </a>
+    </div>
+    <form method="post" , action="/logout">
+      <button id="switch-button">Logout</button>
+    </form>
+  </header>
+  <main>
+    <div id="main-wrapper">
+      <section>
+        <p>TinyURL for <%=url.originalUrl%></p>
+        <p>
+          Short URL ID :
+          <a href="<%=url.originalUrl%>"><%= url.shortUrl %></a>
+        </p>
+      </section>
+      <div id="main-header">
+        <p>Edit URL</p>
+      </div>
+      <form method="POST" action="/urls/<%=url._id%>">
+        <label for="editedUrl">
+          New URL
+          <input type="text" placeholder="http://..." name="editedUrl" />
+        </label>
+        <button type="submit" id="submit-btn" class="new-url-btn">
+          Submit
+        </button>
+      </form>
+    </div>
+  </main>
+</body>
+<%- include ("partials/footer.ejs") %>

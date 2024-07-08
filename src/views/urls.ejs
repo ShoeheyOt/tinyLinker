@@ -1,0 +1,51 @@
+<%- include("partials/header.ejs") %>
+<body>
+  <header>
+    <div id="urls-header">
+      <a href="/urls">
+        <div id="title">TinyLinker</div>
+      </a>
+      <a href="/urls"><button>My URL</button> </a>
+      <a href="/urls/new"><button>Create</button> </a>
+    </div>
+    <!-- <img src="/menu.svg" /> -->
+    <form method="post" action="/logout">
+      <button id="switch-button">Logout</button>
+    </form>
+  </header>
+  <main>
+    <div id="main-wrapper">
+      <div id="main-header">
+        <p>URLs</p>
+        <a href="urls/new">
+          <span>Create new URL</span>
+        </a>
+      </div>
+      <ul class="main-list">
+        <% if(urls.length > 0) {%> <% urls.forEach((url,index) => {%>
+        <li>
+          <div class="main-title">
+            <a href="<%= url.originalUrl%>" target="_blank">
+              <div><%= url.shortUrl %></div>
+            </a>
+            <span><%= url.originalUrl %></span>
+          </div>
+          <div class="main-button">
+            <a href="urls/<%= url._id %>">
+              <button>Edit</button>
+            </a>
+            <a>
+              <form method="post" action="/urls/<%=url._id%>/delete">
+                <button>Delete</button>
+              </form>
+            </a>
+          </div>
+        </li>
+        <%})} else { %>
+        <p>there is nothing to display</p>
+        <%} %>
+      </ul>
+    </div>
+  </main>
+</body>
+<%- include ("partials/footer.ejs") %>

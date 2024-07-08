@@ -1,0 +1,275 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgb(1, 132, 255);
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+button:hover {
+  opacity: 0.5;
+}
+a :hover {
+  opacity: 0.5;
+}
+
+header {
+  height: 98px;
+  color: white;
+  background-color: rgb(1, 132, 255);
+  font-weight: bolder;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 8rem;
+  font-size: 44px;
+}
+header div {
+  margin: auto 0;
+}
+header #title {
+  color: white;
+  font-size: 52px;
+}
+
+#landing-anchor {
+  text-decoration: none;
+}
+
+header button {
+  font-size: 24px;
+  color: white;
+  font-weight: inherit;
+  border: none;
+  background-color: inherit;
+  margin-top: 15px;
+  padding-bottom: 20px;
+}
+
+#urls-header {
+  display: flex;
+  gap: 2rem;
+}
+
+#urls-header a {
+  display: flex;
+  text-decoration: none;
+}
+
+main {
+  height: calc(100vh - 98px);
+  display: flex;
+  justify-content: center;
+}
+
+#main-wrapper {
+  margin-top: 6rem;
+  width: 100%;
+  margin-left: 28rem;
+  margin-right: 28rem;
+  color: rgb(1, 132, 255);
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#main-wrapper section {
+  font-size: 1.5rem;
+}
+#main-landing-title {
+  font-size: 44px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  height: 50px;
+  border: solid rgb(228, 228, 228);
+  border-radius: 6px;
+}
+
+form #submit-btn {
+  color: white;
+  font-weight: bolder;
+  background-color: rgb(1, 132, 255);
+  border: none;
+  font-size: large;
+  cursor: pointer;
+  height: 50px;
+}
+form #submit-btn :hover {
+  opacity: 0.5;
+}
+
+#main-header {
+  width: 100%;
+  color: rgb(1, 132, 255);
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+#main-header p {
+  font-size: 44px;
+}
+
+#main-header a {
+  background-color: rgb(1, 132, 255);
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+#main-header span {
+  color: white;
+  font-weight: bolder;
+  border: none;
+  font-size: large;
+  cursor: pointer;
+  margin: 0 2rem;
+}
+
+.main-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-list li {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px rgb(1, 132, 255);
+  border-radius: 6px;
+  padding: 1.5rem 1rem;
+}
+
+.main-title {
+  font-size: xx-large;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title a {
+  color: inherit;
+}
+.main-title span {
+  font-size: large;
+}
+
+.main-button {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.main-button a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.main-button button {
+  font-size: large;
+  padding: 0.5rem 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.new-url-btn {
+  height: 50px;
+}
+
+#unauthorized-anchor {
+  width: 100%;
+}
+
+#unauthorized-anchor button {
+  font-size: large;
+  width: 100%;
+  height: 52px;
+}
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 42px;
+  }
+  #urls-header button {
+    font-size: 14px;
+  }
+  #switch-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    padding: 0;
+    width: 100vw;
+    padding: 0 1rem;
+  }
+  #urls-header {
+    gap: 0.5rem;
+  }
+  #urls-header #title {
+    font-size: 36px;
+  }
+  header img {
+    width: 40px;
+    height: 40px;
+    margin: auto 0;
+  }
+  #switch-button {
+    font-size: 14px;
+  }
+  #main-wrapper {
+    padding: 0 1rem;
+    margin: 0;
+    margin-top: 6rem;
+  }
+  main #main-header p {
+    font-size: 24px;
+  }
+  main #main-header span {
+    font-size: 14px;
+    margin: 0 1rem;
+  }
+  #main-wrapper .main-title {
+    font-size: 20px;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  #main-wrapper .main-title span {
+    font-size: 14px;
+  }
+  .main-button {
+    flex-direction: column;
+  }
+  .main-button button {
+    width: 52px;
+    font-size: 12px;
+    padding: 0.5rem;
+  }
+}

@@ -2,8 +2,11 @@
   "name": "tinylinker",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --env-file=.env src/index -q",
+    "dev": "nodemon --env-file=.env src/index -q",
+    "demo": "node --env-file=.env src/demo.js"
   },
   "keywords": [],
   "author": "",

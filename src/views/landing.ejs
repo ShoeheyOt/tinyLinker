@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+<body>
+  <header>
+    <a href="/" id="landing-anchor">
+      <div id="title">TinyLinker</div>
+    </a>
+    <a href="/<%= landingTitle == 'Login' ? 'register' : 'login' %>">
+      <button id="switch-button">
+        <%= landingTitle == 'Login' ? 'Register' : 'Login' %>
+      </button>
+    </a>
+  </header>
+  <main>
+    <div id="main-wrapper">
+      <p id="main-landing-title"><%= landingTitle %></p>
+      <form
+        method="post"
+        action="/<%= landingTitle == 'Login' ? 'login' : 'register' %>"
+      >
+        <label
+          >Email
+          <input type="text" name="email" required />
+        </label>
+        <label
+          >Password
+          <input type="password" name="password" required />
+        </label>
+        <button id="submit-btn" type="submit"><%=landingTitle %></button>
+      </form>
+    </div>
+  </main>
+</body>
+<%- include ("partials/footer.ejs") %>
